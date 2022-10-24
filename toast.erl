@@ -80,7 +80,7 @@ listen(N,SNode) ->
         got ->
             io:format("B : ~p" , [N]), 
             if 
-                N == 8 ->
+                N == 6 ->
                     {_,CPU}=statistics(runtime),
                     {_,REAL}=statistics(wall_clock),
                     {actorPid,SNode} ! {time,CPU, REAL, CPU/REAL};
